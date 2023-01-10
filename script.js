@@ -1,4 +1,4 @@
-//*************************ADD ITEMS TO LIST
+//*************************ADD NOTE TO LIST
 let ul = document.querySelector('ul');
 let btn = document.getElementById('add-btn');
 
