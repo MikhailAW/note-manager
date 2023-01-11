@@ -85,9 +85,25 @@ hideItem.addEventListener('click', function (e) {
     }
 });
 
+//******************************SEARCH FILTER */
 
+let searchInput = document.querySelector('#search-note input');
 
+searchInput.addEventListener('keyup', function (e) {
+    let searchChar = e.target.value.toUpperCase();
 
+    var notes = ul.getElementsByTagName('li');
+
+    Array.from(notes).forEach(function (note) {
+        var parText = note.firstElementChild.textContent;
+
+        if (parText.toUpperCase().indexOf(searchChar) !== -1) {
+            note.style.display = 'block';
+        } else {
+            note.style.display = 'none';
+        }
+    });
+});
 
 
 
